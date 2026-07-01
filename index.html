@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aki ADV" />
+    <title>Aki ADV</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="title-screen screen is-active" data-screen="title">
+        <div class="ambient ambient-1"></div>
+        <div class="ambient ambient-2"></div>
+        <div class="title-card">
+          <p class="eyebrow" id="title-eyebrow"></p>
+          <h1 id="title-heading"></h1>
+          <p class="subtitle" id="title-subtitle"></p>
+          <div class="title-actions">
+            <button class="primary" id="start-button" type="button"></button>
+            <button class="ghost" id="skip-button" type="button"></button>
+          </div>
+        </div>
+        <figure class="hero-frame">
+          <img id="title-image" src="./assets/generated/title.png" alt="" />
+        </figure>
+      </section>
+
+      <section class="game-screen screen" data-screen="game" aria-live="polite">
+        <header class="hud">
+          <div>
+            <p class="eyebrow" id="affection-label"></p>
+            <div class="affection-bar" aria-label="affection bar">
+              <span id="affection-fill"></span>
+            </div>
+          </div>
+          <div class="hud-meta">
+            <span id="scene-label"></span>
+            <span id="progress-label"></span>
+          </div>
+        </header>
+
+        <section class="scene-stage">
+          <img id="scene-image" class="scene-image" alt="" />
+          <div class="scene-glow"></div>
+        </section>
+
+        <section class="dialogue-panel">
+          <div class="speaker-row">
+            <span class="speaker-name" id="speaker-name"></span>
+            <span class="speaker-subtitle" id="speaker-subtitle"></span>
+          </div>
+          <p class="dialogue-text" id="dialogue-text"></p>
+          <div class="choice-list" id="choice-list"></div>
+          <div class="controls">
+            <button class="ghost small" id="back-button" type="button"></button>
+            <button class="primary small" id="next-button" type="button"></button>
+          </div>
+        </section>
+      </section>
+
+      <section class="ending-screen screen" data-screen="ending">
+        <div class="ambient ambient-3"></div>
+        <div class="ending-card">
+          <p class="eyebrow" id="ending-eyebrow"></p>
+          <h2 id="ending-title"></h2>
+          <p id="ending-text" class="ending-text"></p>
+          <div class="ending-actions">
+            <button class="primary" id="restart-button" type="button"></button>
+          </div>
+        </div>
+        <img
+          id="ending-image"
+          class="ending-image"
+          src="./assets/generated/ending.png"
+          alt=""
+        />
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
