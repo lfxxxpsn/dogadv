@@ -352,20 +352,90 @@ button.small {
 }
 
 @media (max-width: 880px) {
+  html,
+  body {
+    min-height: 100%;
+  }
+
   body {
     overflow: auto;
+  }
+
+  .app-shell {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    height: auto;
+    overflow: visible;
+  }
+
+  .screen {
+    position: relative;
+    inset: auto;
+    display: none;
+    min-height: 100vh;
+    min-height: 100svh;
+    opacity: 1;
+    pointer-events: none;
+    transform: none;
+    transition: none;
+  }
+
+  .screen.is-active {
+    display: grid;
+    pointer-events: auto;
   }
 
   .title-screen,
   .ending-screen {
     grid-template-columns: 1fr;
-    min-height: 100%;
+    align-content: start;
+    gap: 18px;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 16px;
   }
 
   .hero-frame,
   .ending-image {
     max-width: 560px;
+    max-height: 42svh;
     margin-inline: auto;
+  }
+
+  .game-screen {
+    grid-template-rows: auto minmax(160px, 36svh) auto;
+    gap: 12px;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 12px;
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+
+  .scene-stage {
+    min-height: 0;
+  }
+
+  .scene-image {
+    min-height: 0;
+  }
+
+  .dialogue-panel {
+    padding: 14px;
+  }
+
+  .dialogue-text {
+    min-height: 0;
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .choice-list {
+    margin-top: 12px;
+  }
+
+  .choice-list button {
+    padding: 12px 14px;
   }
 
   .hud,
