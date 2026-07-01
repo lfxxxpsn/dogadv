@@ -1,113 +1,113 @@
 const copy = {
   titleEyebrow: "Aki ADV / 5 Minutes",
-  titleHeading: "\u963f\u79cb\u6200\u611b\u5192\u96aa",
+  titleHeading: "阿秋的戀愛選擇題",
   titleSubtitle:
-    "\u5728\u5074\u665a\u7684\u98a8\u88e1\uff0c\u963f\u79cb\u5f35\u958b\u8033\u6735\uff0c\u7b49\u4f60\u628a\u4eca\u5929\u5269\u4e0b\u7684\u6eab\u67d4\u90fd\u4ea4\u7d66\u5979\u3002",
-  startButton: "\u958b\u59cb\u6563\u6b65",
-  skipButton: "\u76f4\u63a5\u8aad\u7d50\u5c40",
-  affectionLabel: "\u597d\u611f\u5ea6",
-  backButton: "\u56de\u4e0a\u4e00\u53e5",
-  nextButton: "\u4e0b\u4e00\u53e5",
+    "在傍晚的風裡，阿秋張開耳朵，等你把今天剩下的溫柔都交給她。",
+  startButton: "開始散步",
+  skipButton: "跳到結局",
+  affectionLabel: "好感度",
+  backButton: "回上一句",
+  nextButton: "下一句",
   endingEyebrow: "Ending",
-  restartButton: "\u518d\u966a\u963f\u79cb\u4e00\u6b21",
+  restartButton: "再陪阿秋一次",
 };
 
 const scenes = {
   intro: {
-    label: "\u5e8f\u7ae0",
+    label: "序章",
     image: "./assets/generated/title.png",
-    speaker: "\u65c1\u767d",
-    subtitle: "\u4eca\u5929\u7684\u665a\u98a8\u6709\u4e00\u9ede\u751c",
+    speaker: "旁白",
+    subtitle: "今天的晚風有一點甜",
     text:
-      "\u4f60\u525b\u628a\u9580\u6253\u958b\uff0c\u963f\u79cb\u5c31\u63d0\u8d77\u8033\u6735\u3002\u5979\u6c92\u6709\u6025\u8457\u64f7\u4e0a\u4f86\uff0c\u53ea\u662f\u975c\u975c\u770b\u8457\u4f60\uff0c\u50cf\u662f\u5728\u554f\uff1a\u4eca\u5929\u6709\u6c92\u6709\u628a\u6211\u653e\u5728\u5fc3\u4e0a\uff1f",
+      "你剛把門打開，阿秋就提起耳朵。她沒有急著撲上來，只是靜靜看著你，像是在問：今天有沒有把我放在心上？",
     next: "walk",
   },
   walk: {
-    label: "\u9ec3\u660f\u6563\u6b65",
+    label: "黃昏散步",
     image: "./assets/generated/walk.png",
-    speaker: "\u963f\u79cb",
-    subtitle: "\u5c3e\u5df4\u5148\u8aaa\u8a71",
+    speaker: "阿秋",
+    subtitle: "尾巴先說話",
     text:
-      "\u963f\u79cb\u7528\u9f3b\u5c16\u8f15\u8f15\u78b0\u4e86\u78b0\u4f60\u7684\u624b\u5fc3\uff0c\u7136\u5f8c\u628a\u982d\u5074\u904e\u4f86\uff0c\u610f\u601d\u5f88\u660e\u986f\uff1a\u5148\u6478\u6478\u6211\uff0c\u518d\u51fa\u767c\u3002",
+      "阿秋用鼻尖輕輕碰了碰你的手心，然後把頭側過來，意思很明顯：先摸摸我，再出發。",
     choices: [
-      { text: "\u5148\u6478\u6478\u5979\uff0c\u518d\u6162\u6162\u51fa\u9580", affection: 0, next: "park" },
-      { text: "\u5148\u63d0\u51fa\u96f6\u98df\uff0c\u518d\u6478\u6478\u5979", affection: 2, next: "park" },
+      { text: "先摸摸她，再慢慢出門", affection: 0, next: "park" },
+      { text: "先提出零食，再摸摸她", affection: 2, next: "park" },
     ],
   },
   park: {
-    label: "\u516c\u5712\u7d04\u6703",
+    label: "公園約會",
     image: "./assets/generated/park.png",
-    speaker: "\u4f60",
-    subtitle: "\u5fc3\u8df3\u6709\u9ede\u5feb",
+    speaker: "你",
+    subtitle: "心跳有點快",
     text:
-      "\u5230\u4e86\u516c\u5712\uff0c\u963f\u79cb\u6cbf\u8457\u4f60\u8d70\u51fa\u7684\u534a\u5f91\u6253\u8f49\uff0c\u50cf\u4e00\u9846\u6696\u8272\u5c0f\u884c\u661f\u3002\u5979\u5076\u723e\u56de\u982d\uff0c\u78ba\u5b9a\u4f60\u9084\u5728\uff0c\u624d\u53c8\u653e\u5fc3\u5730\u5f80\u524d\u8dd1\u5169\u6b65\u3002",
+      "到了公園，阿秋沿著你走出的半徑打轉，像一顆暖色小行星。她偶爾回頭，確定你還在，才又放心地往前跑兩步。",
     choices: [
-      { text: "\u966a\u5979\u6162\u8d70\uff0c\u807d\u5979\u9f3b\u5b50\u88e1\u7684\u5c0f\u8072\u97ff", affection: 0, next: "play" },
-      { text: "\u548c\u5979\u4e00\u8d77\u5c0f\u8dd1\uff0c\u8b93\u98a8\u4e5f\u52a0\u5165\u7d04\u6703", affection: 2, next: "play" },
+      { text: "陪她慢走，聽她鼻子裡的小聲響", affection: 0, next: "play" },
+      { text: "和她一起小跑，讓風也加入約會", affection: 2, next: "play" },
     ],
   },
   play: {
-    label: "\u73a9\u800d\u6642\u9593",
+    label: "玩耍時間",
     image: "./assets/generated/play.png",
-    speaker: "\u963f\u79cb",
-    subtitle: "\u66f2\u7dda\u6b63\u5728\u5347\u6eab",
+    speaker: "阿秋",
+    subtitle: "曲線正在升溫",
     text:
-      "\u963f\u79cb\u5728\u4f60\u8173\u908a\u7e5e\u4e86\u534a\u5708\uff0c\u505c\u4e0b\u4f86\u7684\u77ac\u9593\uff0c\u773c\u775b\u4eae\u5f97\u50cf\u5728\u5077\u85cf\u661f\u661f\u3002\u9019\u6642\u5019\u5982\u679c\u4f60\u8aaa\u4e00\u53e5\u597d\u807d\u7684\u8a71\uff0c\u5979\u5927\u6982\u6703\u6574\u665a\u90fd\u8a18\u8457\u3002",
+      "阿秋在你腳邊繞了半圈，停下來的瞬間，眼睛亮得像在偷藏星星。這時候如果你說一句好聽的話，她大概會整晚都記著。",
     choices: [
-      { text: "\u597d\u4e56\uff0c\u4eca\u5929\u4e5f\u6700\u559c\u6b61\u4f60", affection: 3, next: "rest" },
-      { text: "\u4f60\u662f\u6211\u4eca\u5929\u7684\u7b2c\u4e00\u540d", affection: 0, next: "rest" },
+      { text: "好乖，今天也最喜歡你", affection: 3, next: "rest" },
+      { text: "你是我今天的第一名", affection: 0, next: "rest" },
     ],
   },
   rest: {
-    label: "\u975c\u4e0b\u4f86",
+    label: "靜下來",
     image: "./assets/generated/rest.png",
-    speaker: "\u65c1\u767d",
-    subtitle: "\u628a\u547c\u5438\u653e\u6162",
+    speaker: "旁白",
+    subtitle: "把呼吸放慢",
     text:
-      "\u8dd1\u7d2f\u4ee5\u5f8c\uff0c\u963f\u79cb\u628a\u8eab\u9ad4\u8cbc\u5230\u4f60\u5074\u908a\uff0c\u50cf\u662f\u5728\u628a\u665a\u5c0f\u7684\u9ad4\u6eab\u5206\u4f60\u4e00\u534a\u3002\u5979\u4ec0\u9ebc\u90fd\u6c92\u8aaa\uff0c\u4f46\u4f60\u77e5\u9053\u5979\u5f88\u5b89\u5fc3\u3002",
+      "跑累以後，阿秋把身體貼到你側邊，像是在把傍晚的體溫分你一半。她什麼都沒說，但你知道她很安心。",
     choices: [
-      { text: "\u8f15\u8072\u554f\u5979\u8981\u4e0d\u8981\u56de\u5bb6", affection: -1, next: "confess" },
-      { text: "\u628a\u624b\u653e\u5728\u5979\u982d\u4e0a\uff0c\u966a\u5979\u518d\u5750\u4e00\u4e0b", affection: 2, next: "confess" },
+      { text: "問她要不要回家", affection: -3, next: "confess" },
+      { text: "把手放在她頭上，陪她再坐一下", affection: 2, next: "confess" },
     ],
   },
   confess: {
-    label: "\u544a\u767d\u524d\u5915",
+    label: "告白前夕",
     image: "./assets/generated/confess.png",
-    speaker: "\u4f60",
-    subtitle: "\u6700\u91cd\u8981\u7684\u53e5\u5b50",
+    speaker: "你",
+    subtitle: "最重要的句子",
     text:
-      "\u4f60\u770b\u8457\u963f\u79cb\uff0c\u5fd7\u5f97\u4eca\u5929\u7684\u6642\u9593\u5f88\u5b8c\u7f8e\u3002\u4e0d\u662f\u592a\u9577\uff0c\u4e5f\u4e0d\u662f\u592a\u77ed\uff0c\u5920\u4f60\u628a\u90a3\u53e5\u8d85\u904e\u6574\u5929\u7684\u8a71\uff0c\u6eab\u67d4\u5730\u8aaa\u51fa\u53e3\u3002",
+      "你看著阿秋，忽然覺得今天的時間剛剛好。不是太長，也不是太短，足夠讓你把那句藏了一整天的話，溫柔地說出口。",
     choices: [
-      { text: "\u963f\u79cb\uff0c\u6211\u60f3\u6bcf\u5929\u90fd\u966a\u4f60\u6563\u6b65", affection: 3, next: "ending" },
-      { text: "\u963f\u79cb\uff0c\u4f60\u9858\u610f\u628a\u4eca\u5929\u4e5f\u5206\u6211\u4e00\u534a\u55ce", affection: 0, next: "ending" },
+      { text: "阿秋，我想每天都陪你散步", affection: 3, next: "ending" },
+      { text: "阿秋，你願意把今天也分我一半嗎", affection: 0, next: "ending" },
     ],
   },
 };
 
 const endings = {
   best: {
-    title: "\u963f\u79cb\u628a\u722a\u5b50\u653e\u9032\u4f60\u7684\u638c\u5fc3",
+    title: "阿秋把爪子放進你的掌心",
     text:
-      "\u5979\u7528\u6700\u5b89\u975c\u7684\u65b9\u5f0f\u56de\u7b54\u4e86\u4f60\u3002\u5c3e\u5df4\u8f15\u8f15\u6383\u904e\u4f60\u7684\u624b\u80cc\uff0c\u50cf\u662f\u5728\u8aaa\uff1a\u4f60\u4e0d\u7528\u5f88\u6703\u8aaa\u8a71\uff0c\u53ea\u8981\u4e00\u76f4\u5728\uff0c\u6211\u5c31\u6703\u5f88\u958b\u5fc3\u3002\u4eca\u665a\u7684\u98a8\u5f88\u6f64\uff0c\u963f\u79cb\u4e5f\u5f88\u6f64\uff0c\u800c\u4f60\u5011\u628a\u5f7c\u6b64\u90fd\u7559\u5728\u4e86\u9019\u4e00\u9801\u3002",
+      "她用最安靜的方式回答了你。尾巴輕輕掃過你的手背，像是在說：你不用很會說話，只要一直在，我就會很開心。今晚的風很柔，阿秋也很柔，而你們把彼此都留在了這一頁。",
     image: "./assets/generated/ending.png",
   },
   good: {
-    title: "\u963f\u79cb\u9760\u904e\u4f86\uff0c\u9f3b\u5c16\u78b0\u4e86\u78b0\u4f60",
+    title: "阿秋靠過來，鼻尖碰了碰你",
     text:
-      "\u5979\u6c92\u6709\u628a\u7b54\u6848\u8aaa\u5f97\u5f88\u5927\u8072\uff0c\u4f46\u90a3\u4e00\u500b\u5c0f\u5c0f\u7684\u9760\u8fd1\u5df2\u7d93\u5920\u4e86\u3002\u4f60\u77e5\u9053\uff0c\u9019\u4e0d\u662f\u7d50\u675f\uff0c\u53ea\u662f\u4f60\u548c\u963f\u79cb\u628a\u4e0b\u4e00\u6b21\u6563\u6b65\u7d04\u597d\u4e86\u3002",
+      "她沒有把答案說得很大聲，但那一個小小的靠近已經足夠。你知道，這不是結束，只是你和阿秋把下一次散步約好了。",
     image: "./assets/generated/ending.png",
   },
   soft: {
-    title: "\u963f\u79cb\u5728\u4f60\u8eab\u908a\u5b89\u975c\u7761\u8457\u4e86",
+    title: "阿秋在你身邊安靜睡著了",
     text:
-      "\u5979\u628a\u4eca\u5929\u5269\u4e0b\u7684\u5fc3\u60c5\u4ea4\u7d66\u4f60\u4fdd\u7ba1\u3002\u96d6\u7136\u9019\u4e00\u5c40\u6c92\u6709\u6700\u4eae\u7684\u53e5\u5b50\uff0c\u4f46\u4f60\u5011\u4e00\u8d77\u628a\u9019\u500b\u665a\u9918\u904e\u5f97\u5f88\u8212\u670d\uff0c\u5f88\u50cf\u4e00\u6bb5\u6703\u88ab\u53cd\u8907\u60f3\u8d77\u7684\u6eab\u67d4\u56de\u61b6\u3002",
+      "她把今天剩下的心情交給你保管。雖然這一局沒有最亮的句子，但你們一起把這個傍晚過得很舒服，很像一段會被反覆想起的溫柔回憶。",
     image: "./assets/generated/ending.png",
   },
   dark: {
-    title: "\u963f\u79cb\u6c92\u6709\u56de\u982d\u3002",
+    title: "阿秋沒有回頭。",
     text:
-      "\u4f60\u8aaa\u4e86\u592a\u591a\u8f15\u6d6e\u7684\u8a71\uff0c\u4e5f\u628a\u5979\u7684\u5b89\u5168\u611f\u4e00\u9ede\u9ede\u62bd\u8d70\u3002\u963f\u79cb\u7ad9\u5728\u665a\u98a8\u88e1\u770b\u4e86\u4f60\u5f88\u4e45\uff0c\u7136\u5f8c\u5c31\u80cc\u904e\u8eab\u53bb\u3002\u9019\u4e00\u665a\uff0c\u6709\u4e9b\u88ab\u4f60\u4e09\u8a00\u5169\u8a9e\u79d8\u5bc6\u7d0d\u5165\u96e8\u88e1\u3002",
-    image: "./assets/generated/dark-ending.svg",
+      "你說了太多輕浮的話，也把她的安全感一點點抽走。阿秋站在晚風裡看了你很久，然後就背過身去。這一晚，有些話被你三言兩語秘密納入雨裡。",
+    image: "./assets/generated/dark-ending.png",
   },
 };
 
