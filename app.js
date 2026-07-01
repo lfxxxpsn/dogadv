@@ -166,6 +166,10 @@ function updateStaticCopy() {
 
 function renderScene() {
   const scene = scenes[state.scene];
+  if (!scene) {
+    showEnding();
+    return;
+  }
   const index = order.indexOf(state.scene) + 1;
   ui.sceneLabel.textContent = scene.label;
   ui.progressLabel.textContent = `${index} / ${order.length}`;
@@ -198,11 +202,11 @@ function choose(choice) {
   });
   state.affection += choice.affection;
   state.scene = choice.next;
-  renderScene();
-
   if (state.scene === "ending") {
     showEnding();
+    return;
   }
+  renderScene();
 }
 
 function advance() {
@@ -221,6 +225,10 @@ function advance() {
     affection: state.affection,
   });
   state.scene = scene.next;
+  if (state.scene === "ending") {
+    showEnding();
+    return;
+  }
   renderScene();
 }
 
